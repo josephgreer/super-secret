@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title></title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<div id="wrapper">
+	<h1>Site</h1>
+	{% if pubs_list %}
+		<ul class="pubs">
+			{% for pub in pubs_list %}
+			<li><a href="/cms/{{ pub.id }}">{{ pub.title }}</a></li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>There are no pubs</p>
+	{% endif %}
+	<div class="entry">
+		{% block content %}{% endblock %}
+	</div>
+	</div>
+</body>
+</html>

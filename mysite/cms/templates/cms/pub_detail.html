@@ -1,0 +1,10 @@
+{% extends "cms/base.html" %}
+
+{% block content %}
+	{% if pub %}
+	<h2 id="pub-title">Pub title : {{ pub.title }}</h2>
+	<p>Content: {{ pub.content }}</p>
+	{% else %}
+	<h2>nadda</h2>
+	{% endif %}
+{% endblock %}
