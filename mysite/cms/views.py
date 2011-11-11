@@ -8,5 +8,5 @@ def index(request):
 	return render_to_response('cms/base.html', {'pubs_list' : pubs_list })
 		
 def detail(request, pub_id):
-	pub = pub_id
+	pub = Pub.objects.get(pk=pub_id)
 	return render_to_response('cms/pub_detail.html', { 'pub': pub })
