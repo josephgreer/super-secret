@@ -111,11 +111,11 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'polls',
-	'cms',
 	'django.contrib.flatpages',
 	'django.contrib.admin',
 	'django.contrib.admindocs',
+	
+	'elTopo'
 )
 
 # A sample logging configuration. The only tangible logging

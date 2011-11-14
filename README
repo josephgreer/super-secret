@@ -1,0 +1,7 @@
+=================
+Django Basic App
+=================
+
+Makes grilled cheese sandwiches based on location weather. Default values cheeses are set to: Gruyère, Cheddar, Limburger (a soft white cheese with a very strong odor and flavor), and Danish Blue cheese.
+
+Application is compatible with legacy IBM Tabulators, Interpreters, and Collators.
