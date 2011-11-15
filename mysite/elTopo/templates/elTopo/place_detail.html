@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% if detail %}
+
+{% block content %}
+
+<h1>{{ detail.name }}</h1>
+
+
+{% else %}
+
+<p>ain't find shit</p>
+
+{% endif %}
+
+{% endblock %}

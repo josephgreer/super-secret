@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 class Index(models.Model):
 	"""index model"""
@@ -29,6 +30,7 @@ class Place(models.Model):
 	url = models.URLField(blank=True, verify_exists=False)
 	img = models.CharField(max_length=50)
 	slug = models.SlugField(max_length=50)
+	pub_date = datetime.datetime.now()
 	
 	def __unicode__(self):
 		return self.name

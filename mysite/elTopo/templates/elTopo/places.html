@@ -1,1 +1,18 @@
-{% for place in %}
+{% extends "base.html" %}
+{% if app_places %}
+
+{% block title %}place{% endblock %}
+
+{% block nav %}
+
+<span><a href="">about</a></span>
+
+<ul>
+{% for place in app_places %}
+	<li><a href="{{ place.slug }}">{{ place.name }}</a></li>
+{% endfor %}
+</ul>
+
+{% endblock %}
+
+{% endif %}

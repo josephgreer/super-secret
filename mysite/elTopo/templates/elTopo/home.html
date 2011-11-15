@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% if app_places %}
+
+{% block content %}
+<ul>
+{% for place in app_places %}
+	<li><a href="pubs/{{ place.slug }}">{{ place.name }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+
+	<h1 id="place-home"><a href="pubs">More</a></h1>
+{% endif %}
+{% endblock %}
