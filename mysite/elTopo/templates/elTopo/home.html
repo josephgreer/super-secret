@@ -7,12 +7,12 @@
 {% block content %}
 <ul>
 {% for place in app_places %}
-	<li><a href="pubs/{{ place.slug }}">{{ place.name }}</a></li>
+	<li><a href="{{ object.get_absolute_url }}">{{ place.name }}</a></li>
 {% endfor %}
 </ul>
 {% endblock %}
 
 
-	<h1 id="place-home"><a href="pubs">More</a></h1>
+	<h1 id="place-home"><a href="{{ object.get_absolute_url }}">More</a></h1>
 {% endif %}
 {% endblock %}

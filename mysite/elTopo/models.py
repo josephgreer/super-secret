@@ -15,10 +15,6 @@ class PlaceIndex(models.Model):
 	title = models.CharField(max_length=255)
 	slug = models.SlugField(max_length=50)
 	
-	class Meta:
-		db_table = 'place_name'
-		ordering = ('title',)
-	
 	def __unicode__(self):
 		return self.title
 		
@@ -26,7 +22,6 @@ class PlaceIndex(models.Model):
 class Place(models.Model):
 	"""detail model"""
 	name = models.CharField(max_length=255)
-	#hours = models.DateTimeField
 	url = models.URLField(blank=True, verify_exists=False)
 	img = models.CharField(max_length=50)
 	slug = models.SlugField(max_length=50)

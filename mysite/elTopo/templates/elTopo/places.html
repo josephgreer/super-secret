@@ -9,7 +9,7 @@
 
 <ul>
 {% for place in app_places %}
-	<li><a href="{{ place.slug }}">{{ place.name }}</a></li>
+	<li><a href="{{ object.get_absolute_url }}">{{ place.name }}</a></li>
 {% endfor %}
 </ul>
 

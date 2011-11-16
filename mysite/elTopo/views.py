@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from elTopo.models import *
+from elTopo.models import Place
 from django.shortcuts import render_to_response
 
 
@@ -11,7 +11,7 @@ def placeIndex(request):
 	app_places = Place.objects.all()
 	return render_to_response('elTopo/places.html', { 'app_places' : app_places })
 	
-def place(request, place_id):
-	detail = Place.objects.place_id()
-	return render_to_response('elTopo/place_detail.html', {'detail' : detail })
+def place(request):
+	#return render_to_response('elTopo/place_detail.html', {'detail' : detail })
+	return HttpResponse("Ain't find shit");
 	
